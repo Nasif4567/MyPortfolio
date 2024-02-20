@@ -29,6 +29,234 @@ body {
   /* applies to screens wider than 999px */
 
   body {
-    background: #ccf;
+  background-color: #cfc;
+  margin: 0;
   } 
-}
+
+  .home-container{
+    display: flex; /* Use flex container */
+    flex-direction: column;
+  }
+
+  .blockOne{
+   display: flex; /* Use flex container */
+   flex-direction: column;
+   align-items: center;
+   margin:0;
+   background-color: #2a315d;
+  }
+
+  .Title-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 40px; /* Adjust the gap between blocks */
+    padding-left: 250px; 
+    padding-top: 50px;
+  }
+
+  .AvatarMaker{
+    background-image: url('Assets/avatar.png');
+    background-size: 40% 90%;
+    background-repeat: no-repeat;
+  }
+
+  .blockTwo{
+  border: none;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-image: url("Assets/OIP.jpg");
+  background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+  }
+
+
+  p{
+    color: white;
+    font-size:18px;
+   font-family:sans-serif;
+   margin: 1;
+  }
+
+  h1{
+    margin: 0;
+    font-size:45px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .Footer{
+    width: 100%;
+    margin-top: 0;
+    background-image: linear-gradient(#261935,#231e2a);
+  }
+  button {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    color: #2a315d;
+    border: solid 1px white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: background-color 0.3s, width 0.3s, height 0.3s, transform 0.3s; /* Add transitions for width, height, and transform */
+  }
+  
+  button:hover {
+    background-color: #2a315d;
+    color: white;
+    width: 210px;
+    height: 55px;
+    transform: scale(1.05);
+  }
+
+
+  
+  .navbar {
+    background-color: #2a315d;
+    overflow: hidden;
+    padding: 20px; /* Adjusted padding */
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex; /* Use flexbox for better alignment control */
+    align-items: center; /* Center the items vertically */
+  }
+  
+  .navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar button {
+    margin-left: auto; /* Push the button to the right */
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(236, 209, 209, 0.7);
+    backdrop-filter: blur(10px);
+    color: black;
+  }
+  
+  .navbar p {
+    margin: 0; /* Remove default margin */
+    margin-left: auto; /* Push the paragraph to the right */
+    font-weight: bold;
+    color: white; /* Adjusted text color */
+  }
+
+
+
+
+
+  @keyframes fallRain {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
+  .raindrop {
+    width: 2px;
+    height: 60px;
+    background-color: gray;
+    position: absolute;
+    top: -10px;
+    animation: fallRain linear infinite;
+  }
+  
+  .raindrop:nth-child(1) {
+    left: 10%;
+    animation-duration: 0.75s;
+  }
+  
+  .raindrop:nth-child(2) {
+    left: 20%;
+    animation-duration: 1s;
+  }
+  
+
+  .raindrop:nth-child(3) {
+    left: 30%;
+    animation-duration: 0.9s;
+  }
+  
+
+  .raindrop:nth-child(4) {
+    right: 40%;
+    animation-duration: 1.2s;
+  }
+
+  .raindrop:nth-child(5) {
+    right: 50%;
+    animation-duration: 1.5s;
+  }
+
+  .raindrop:nth-child(6) {
+    right: 30%;
+    animation-duration: 1.5s;
+  }
+
+  .raindrop:nth-child(7) {
+    right: 30%;
+    animation-duration: 1.5s;
+  }
+
+  .raindrop:nth-child(8) {
+    right: 10%;
+    animation-duration: 1.5s;
+  }
+
+
+
+
+  .text-slideshow {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .text-slideshow h1 {
+    margin: 0;
+    opacity: 0;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+  }
+  
+  @keyframes circularMotion {
+    0%, 100% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    25% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Add delay to each paragraph */
+  .text-slideshow h1:nth-child(1) {
+    animation: circularMotion 9s infinite; 
+  }
+  
+  .text-slideshow h1:nth-child(2) {
+    animation: circularMotion 9s 3s infinite; 
+  }
+  
+  .text-slideshow h1:nth-child(3) {
+    animation: circularMotion 9s 6s infinite; 
+  }
+  
+}  
