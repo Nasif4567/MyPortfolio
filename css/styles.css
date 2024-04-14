@@ -422,7 +422,7 @@ body {
 
   .BackgroundSection{
     color: white;
-    background-color: #000000;
+    background-image: linear-gradient(#000000, #261935 );
     padding: 70px;
   }
 
@@ -508,6 +508,50 @@ body {
 
   .skillsblock{
     display: flex;
+  }
+
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-container form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input{
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+  }
+
+  textarea{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+  }
+
+  .ContactBackground{
+    border: none;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("Assets/OIP.jpg");
+    background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+    }
+
+  .FormLayout{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    padding: 30px;
+    background-color:rgb(43, 28, 60,0.5);
   }
 
 

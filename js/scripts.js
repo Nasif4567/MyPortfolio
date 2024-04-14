@@ -10,16 +10,30 @@ function slideTo(page, event) {
     }, 1000);
 }
 
+
+//--------------------------------------Download cv ----------------------------------------
+
+  function downloadCV() {
+    const fileUrl = 'path/to/your/cv.pdf';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'Your_CV_Name.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+
 //----------------------------------------------------------------
 // Header Reusable 
-var headerElement = document.createElement('header');
+let headerElement = document.createElement('header');
 headerElement.innerHTML = `
   <div class="navbar">
     <a href="#" onclick="slideTo('index.html', event)">Home</a>
     <a href="#" onclick="slideTo('About.html', event)">About</a>
     <a href="#Work">Work</a>
     <p>Ahmed's Portfolio</p>
-    <button>Let's Talk</button>
+    <button onclick="slideTo('Contact.html', event)">Let's Talk</button>
   </div>
 `;
 // Append the header to the body of the document
