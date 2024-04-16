@@ -13,12 +13,20 @@ async function listRepoIssues() {
 
     const data = await response.json();
     
-    const repoList = document.getElementById('repoList');
-        data.forEach(repo => {
-          const li = document.createElement('li');
-          li.textContent = repo.name;
-          repoList.appendChild(li);
-        });
+    const repoContainer = document.getElementById('repoContainer');
+    data.forEach(repo => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+
+      const cardContent = `
+        <h3>${repo.name}</h3>
+        <p>${repo.description}</p>
+        <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+      `;
+      card.innerHTML = cardContent;
+
+      repoContainer.appendChild(card);
+    });
 
     console.log("Response data:", data);
   } catch (error) {
