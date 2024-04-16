@@ -21,7 +21,7 @@ async function listRepoIssues() {
       const cardContent = `
         <h3>${repo.name}</h3>
         <p>${repo.description}</p>
-        <p>${repo.language}</p>
+        <p>${repo.laguage}</p>
         <a href="${repo.html_url}" target="_blank">View on GitHub</a>
 
       `;
