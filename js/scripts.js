@@ -31,7 +31,7 @@ headerElement.innerHTML = `
   <div class="navbar">
     <a href="#" onclick="slideTo('index.html', event)">Home</a>
     <a href="#" onclick="slideTo('About.html', event)">About</a>
-    <a href="#Work">Work</a>
+    <a href="#" onclick="slideTo('Works.html', event)">Work</a>
     <p>Ahmed's Portfolio</p>
     <button onclick="slideTo('Contact.html', event)">Let's Talk</button>
   </div>
