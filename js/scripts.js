@@ -29,11 +29,13 @@ function slideTo(page, event) {
 let headerElement = document.createElement('header');
 headerElement.innerHTML = `
   <div class="navbar">
-    <a href="#" onclick="slideTo('index.html', event)">Home</a>
-    <a href="#" onclick="slideTo('About.html', event)">About</a>
-    <a href="#" onclick="slideTo('Works.html', event)">Work</a>
+    <a class="navlink" href="#" onclick="slideTo('index.html', event)">Home</a>
+    <a class="navlink" href="#" onclick="slideTo('About.html', event)">About</a>
+    <a class="navlink" href="#" onclick="slideTo('Works.html', event)">Work</a>
     <p>Ahmed's Portfolio</p>
     <button onclick="slideTo('Contact.html', event)">Let's Talk</button>
+    <i class="fa fa-bars" onclick="toggleActive()"></i>
+    
   </div>
 `;
 // Append the header to the body of the document
@@ -65,3 +67,13 @@ class Footer extends HTMLElement {
   }
 
   customElements.define('footer-custom', Footer);
+
+
+  function toggleActive() {
+    var activeDiv = document.getElementById("activeDiv");
+    if (activeDiv.style.display === "none") {
+      activeDiv.style.display = "block";
+    } else {
+      activeDiv.style.display = "none";
+    }
+  }

@@ -3,31 +3,26 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
-body {
-  background: #fcc;
-} 
-
 
 
 /* TABLET STYLES */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) and (max-width: 999px) {
 
   /* applies to screens wider than 999px */
 
   body {
-    background-color: #231e2a;
+    background-color: #2a315d;
     margin: 0;
     } 
   
     .home-container{
-      display: flex; /* Use flex container */
+      display: flex; 
       flex-direction: column;
-      
     }
   
     .blockOne{
-     display: flex; /* Use flex container */
+     display: flex; 
      flex-direction: column;
      align-items: center;
      margin:0;
@@ -36,16 +31,19 @@ body {
   
     .Title-container {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-      gap: 40px; /* Adjust the gap between blocks */
-      padding-left: 250px; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 20px; 
+      padding-left: 200px; 
       padding-top: 50px;
     }
+
   
     .AvatarMaker{
       background-image: url('Assets/avatar.png');
-      background-size: 40% 90%;
+      background-size: 60% 50%;
+      margin-right: 50px;
       background-repeat: no-repeat;
+      width: 300px;
     }
   
     .blockTwo{
@@ -98,7 +96,7 @@ body {
     }
   
     .transparentbtn{
-      margin-left: 10px;
+      margin-top: 10px;
       border: solid 1px white;
       background-color: transparent;
       border-radius: 3px;
@@ -127,29 +125,49 @@ body {
       font-family: Arial, Helvetica, sans-serif;
       display: flex; /* Use flexbox for better alignment control */
       align-items: center; /* Center the items vertically */
+      justify-content: space-between;
     }
     
-    .navbar a {
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
+    .navlink {
+      display: none;
     }
     
     .navbar button {
-      margin-left: auto
+      display: none;
     }
-    
-    .navbar a:hover {
-      background-color: rgba(236, 209, 209, 0.7);
-      backdrop-filter: blur(10px);
-      color: black;
+
+    .navbar i{
+      color: whitesmoke;
     }
+
+    .active {
+      position: absolute;
+      display: flex; /* Use flexbox */
+      flex-direction: column; /* Arrange items in a column */
+      justify-content: center; /* Center items vertically */
+      align-items: center; /* Center items horizontally */
+      background-color: purple; /* Example background color */
+      padding: 10px; /* Example padding */
+      margin-top: 10px; /* Add space between hamburger icon and active div */
+      text-align: center; /* Center text horizontally */
+      width: 100%;
+      height: 90%;
+    }
+  
+    .active a {
+      display: block;
+      color: beige;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 5px; /* Adjust margin for spacing */
+    }
+
     
     .navbar p {
       margin: 0; /* Remove default margin */
-      margin-left: auto; /* Push the paragraph to the right */
       font-weight: bold;
+      font-size: 25px;
       color: white; /* Adjusted text color */
       transition: color 0.3s ease, transform 0.3s ease; /* Add transition for smooth color change and bounce effect */
     }
@@ -158,6 +176,8 @@ body {
       color: yellow; /* Change the color on hover */
       transform: scale(1.2); 
     }
+
+
   
   
     .Footer{
@@ -359,18 +379,16 @@ body {
   
     .AboutBlockGrid{
       
-      display: grid;
-      margin-top: 40px;
-      grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
       background-image: linear-gradient(#2a315d , #000000);
     }
   
     .AboutImage {
-      width: 650px; /* Adjust the size as needed */
-      height: 650px;
+      width: auto; /* Adjust the size as needed */
+      height: 600px;
       overflow: hidden;
-      border-radius: 50%;
-      margin-left: 100px;
       background-size: cover;
       background-image: url('Assets/ProfilePic.jpg');
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
@@ -385,20 +403,18 @@ body {
       border-radius: 10px;
       border: 1px solid rgb(28, 27, 27, 0.5) ;
       backdrop-filter: blur(10px);
-      margin-left: 10px;
       
     }
   
     .AboutMe p{
-      
       line-height: 1.6;
-      font-size: 17px;
+      font-size: 16px;
       color: rgb(202, 200, 200);
     }
   
     .AboutMe h1{
       color: white;
-      font-size: 50px;
+      font-size: 40px;
       font-weight: lighter;
       
     }
@@ -458,13 +474,14 @@ body {
   
   .inside{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
   }
   
   .skillSection{
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin-top: 20px;
       background-color: rgb(28, 27, 27, 0.1);
       border: 1px solid rgb(28, 27, 27, 0.5) ;
@@ -479,18 +496,20 @@ body {
     }
   
     .skillSectionGrid{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr; 
-      width: 1000px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
   
     }
   
     .skills{
       margin-top: 30px;
       color: white;
-      width: fit-content;
       padding-left: 40px;
       padding-right: 40px;
+      align-items: center;
+      justify-content: center;
       border-radius: 30px;
       margin-right: 20px;
       border: solid 1px gainsboro;
@@ -543,6 +562,89 @@ body {
       padding: 30px;
       background-color:rgb(43, 28, 60,0.5);
     }
+
+     /*work page*/
+  .workcontainer{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#2a315d , #261935);
+    margin: 20px;
+    border-radius: 10px;
+   }
+ 
+   .workcontainer h1{
+     margin-top: 30px;
+     margin-left: 25px;
+     margin-bottom: 10px;
+   }
+ 
+ 
+   .Projects{
+   display: flex;
+   flex-direction: column;
+   margin: 20px;
+   padding: 10px;
+   border-radius: 10px;
+   background-image: linear-gradient(#2a315d , #261935);
+   }
+ 
+ 
+   .card {
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     padding: 10px;
+     margin-bottom: 20px;
+   }
+ 
+   .card img{
+     width: 100%;
+     height: 100%;
+     border-radius: 20px;
+   }
+   
+   .card h3 {
+     font-size: 18px;
+     margin-bottom: 10px;
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   .card p {
+     font-size: 16px;
+     color: whitesmoke;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   .card a {
+     display: inline-block;
+     margin-top: 10px;
+     text-decoration: none;
+     color: whitesmoke;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: transparent;
+     border: solid white;
+     padding: 15px;
+     border-radius: 10px;
+   }
+   
+   .card a:hover {
+     text-decoration: underline;
+   }
+ 
+   .spinner {
+     border: 4px solid rgba(0, 0, 0, 0.1);
+     border-left-color: #7986cb;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     animation: spin 1s linear infinite;
+     margin: 20px auto;
+   }
+   
+   @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+   }
 }
 
 
@@ -695,6 +797,18 @@ body {
   .navbar p:hover {
     color: yellow; /* Change the color on hover */
     transform: scale(1.2); 
+  }
+
+  .active {
+    display: none;
+  }
+
+  .active a {
+    display: none;
+  }
+
+  .navbar i {
+    display: none;
   }
 
 
@@ -1026,7 +1140,6 @@ body {
   .skills{
     margin-top: 30px;
     color: white;
-    width: fit-content;
     border-radius: 30px;
     margin-right: 20px;
     border: solid 1px gainsboro;
