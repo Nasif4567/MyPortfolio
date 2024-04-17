@@ -1,8 +1,8 @@
 async function listRepoIssues() {
   try {
-    const repoContainer = document.getElementById('repoContainer');
-    repoContainer.innerHTML = '<p>Loading...</p>'; // Display loading message
-
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    loadingSpinner.style.display = 'hide'; // Show loading spinner
+    
     const response = await fetch('https://api.github.com/user/repos', {
       headers: {
         'Authorization': 'Bearer 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',
@@ -16,9 +16,7 @@ async function listRepoIssues() {
 
     const data = await response.json();
     
-    // Clear loading message
-    repoContainer.innerHTML = '';
-
+    const repoContainer = document.getElementById('repoContainer');
     const assetsFolder = 'shuffle/';
     const images = ['Picture1.jpg', 'Picture2.jpg', 'Picture3.jpg', 'Picture4.jpg'];
     shuffleArray(images); // Shuffle the images array
@@ -26,6 +24,10 @@ async function listRepoIssues() {
     for (let i = 0; i < data.length; i++) {
       const card = document.createElement('div');
       card.classList.add('card');
+
+        // Clear loading spinner after fetching data
+    loadingSpinner.style.display = 'none';
+
 
       const repoIndex = i % data.length; // Use modular arithmetic to repeat repo data
       const imageIndex = i % images.length; // Use modular arithmetic to repeat images
