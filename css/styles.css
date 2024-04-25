@@ -2,52 +2,25 @@
 
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
+body {
+  background-color: #2a315d;
+  margin: 0;
+  } 
 
+.home-container{
+    display: flex; 
+    flex-direction: column;
+  } 
 
-
-/* TABLET STYLES */
-
-@media screen and (min-width: 500px) and (max-width: 999px) {
-
-  /* applies to screens wider than 999px */
-
-  body {
+.blockOne{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
     background-color: #2a315d;
-    margin: 0;
-    } 
-  
-    .home-container{
-      display: flex; 
-      flex-direction: column;
-    }
-  
-    .blockOne{
-     display: flex; 
-     flex-direction: column;
-     align-items: center;
-     margin:0;
-     background-color: #2a315d;
-    }
-  
-    .Title-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr; 
-      gap: 20px; 
-      padding-left: 200px; 
-      padding-top: 50px;
-    }
+   }
 
-  
-    .AvatarMaker{
-      background-image: url('Assets/avatar.png');
-      background-size: 60% 50%;
-      margin-right: 50px;
-      background-repeat: no-repeat;
-      width: 300px;
-    }
-  
-    .blockTwo{
-    border: none;
+
+   .blockTwo{
     height: 700px;
     width: 100%;
     display: flex;
@@ -56,23 +29,22 @@
     background-image: url("Assets/OIP.jpg");
     background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
     }
-  
-  
+
     p{
       color: white;
       font-size:18px;
      font-family:sans-serif;
      margin: 1;
     }
-  
+
     h1{
       margin: 0;
       font-size:45px;
       color: white;
       font-family: Arial, Helvetica, sans-serif;
     }
-  
-  
+
+      
     button {
       width: 200px;
       height: 50px;
@@ -89,12 +61,12 @@
     button:hover {
       background-color: #2a315d;
       color: white;
-      width: 210px;
-      height: 55px;
+      width: auto;
+      height: auto;
       cursor: pointer;
       transform: scale(1.05);
     }
-  
+
     .transparentbtn{
       margin-top: 10px;
       border: solid 1px white;
@@ -113,9 +85,14 @@
       height: 55px;
       transform: scale(1.05);
     }
-  
-  
-    
+
+    .Title-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      margin-left: 20px;
+    }
+
+
     .navbar {
       background-color: #2a315d;
       overflow: hidden;
@@ -139,6 +116,14 @@
     .navbar i{
       color: whitesmoke;
     }
+
+    .AvatarMaker{
+      background-image: url('Assets/avatar.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+    }
+
 
     .active {
       position: absolute;
@@ -181,16 +166,15 @@
     }
 
 
-  
-  
     .Footer{
       width: 100%;
       height: 250px;
-      margin-top: 0;
       background-image: linear-gradient(#261935,#231e2a);
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative; /* Add relative positioning */
+      z-index: 1;
     }
   
     .FooterSocials {
@@ -259,14 +243,7 @@
       font-size: 13px;
       align-items: center;
     }
-  
-    
-  
-  
-  
-  
-  
-  
+
     @keyframes fallRain {
       to {
         transform: translateY(100vh);
@@ -323,10 +300,7 @@
       right: 10%;
       animation-duration: 1.5s;
     }
-  
-  
-  
-  
+
     .text-slideshow {
       overflow: hidden;
       width: 100%;
@@ -371,9 +345,9 @@
     .text-slideshow h1:nth-child(3) {
       animation: circularMotion 9s 6s infinite; 
     }
-  
-  
-  
+
+
+
     .about-container{
       display: flex; /* Use flex container */
       flex-direction: column;  
@@ -427,8 +401,7 @@
       font-size: 40px;
       margin-top: 70px;
     }
-  
-  
+
     .BackgroundSection{
       color: white;
       background-image: linear-gradient(#000000, #261935 );
@@ -444,8 +417,7 @@
   }
   
   .EducationSection h2{
-    margin-left: 20px;
-    font-size: 50px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -521,7 +493,9 @@
     .skillsblock{
       display: flex;
     }
-  
+
+
+    /*Contact page */
     .contact-container{
       display: flex;
       flex-direction: column;
@@ -566,12 +540,12 @@
       background-color:rgb(43, 28, 60,0.5);
     }
 
+    
      /*work page*/
   .workcontainer{
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(#2a315d , #261935);
-    margin: 20px;
     border-radius: 10px;
    }
  
@@ -648,34 +622,94 @@
      0% { transform: rotate(0deg); }
      100% { transform: rotate(360deg); }
    }
+  
+  
+  
+  
+
+
+
+
+/* TABLET STYLES */
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+
+  /* applies to screens wider than 999px */
+  
+    .Title-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 20px; 
+      padding-left: 200px; 
+      padding-top: 50px;
+    }
+
+  
+    .AvatarMaker{
+      background-image: url('Assets/avatar.png');
+      background-size: 60% 50%;
+      margin-right: 50px;
+      background-repeat: no-repeat;
+      width: 300px;
+      display: block;
+    }
+  
+    button {
+      width: 200px;
+      height: 50px;
+      padding: 10px;
+      background-color: white;
+      color: #2a315d;
+      border: solid 1px white;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 3px;
+      font-weight: bold;
+      transition: background-color 0.3s, width 0.3s, height 0.3s, transform 0.3s; /* Add transitions for width, height, and transform */
+    }
+    
+    button:hover {
+      background-color: #2a315d;
+      color: white;
+      width: 210px;
+      height: 55px;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  
+    .transparentbtn{
+      margin-top: 10px;
+      border: solid 1px white;
+      background-color: transparent;
+      border-radius: 3px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: background-color 0.3s, width 0.3s, height 0.3s, transform 0.3s;
+    }
+  
+    .transparentbtn:hover{
+      background-color: white;
+      color: #2a315d;
+      cursor: pointer;
+      width: 210px;
+      height: 55px;
+      transform: scale(1.05);
+    }
+
+    .EducationSection h2{
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 20px;
+    }
 }
 
 
 
 /* DESKTOP STYLES-------------------------------------------------------- */
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) and (max-width: 2000px) {
 
   /* applies to screens wider than 999px */
 
-  body {
-  background-color: #231e2a;
-  margin: 0;
-  } 
-
-  .home-container{
-    display: flex; /* Use flex container */
-    flex-direction: column;
-    
-  }
-
-  .blockOne{
-   display: flex; /* Use flex container */
-   flex-direction: column;
-   align-items: center;
-   margin:0;
-   background-color: #2a315d;
-  }
 
   .Title-container {
     display: grid;
@@ -687,8 +721,9 @@
 
   .AvatarMaker{
     background-image: url('Assets/avatar.png');
-    background-size: 40% 90%;
+    background-size: contain;
     background-repeat: no-repeat;
+    display: block;
   }
 
   .blockTwo{
@@ -764,12 +799,12 @@
   .navbar {
     background-color: #2a315d;
     overflow: hidden;
-    padding: 20px; /* Adjusted padding */
+    padding: 20px; 
     font-size: 18px;
     backdrop-filter: blur(10px);
     font-family: Arial, Helvetica, sans-serif;
-    display: flex; /* Use flexbox for better alignment control */
-    align-items: center; /* Center the items vertically */
+    display: flex; 
+    align-items: center;
   }
   
   .navbar a {
@@ -777,10 +812,12 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    display: block;
   }
   
   .navbar button {
-    margin-left: auto
+    margin-left: auto;
+    display: block;
   }
   
   .navbar a:hover {
@@ -1219,14 +1256,14 @@
    display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
-  margin: 20px;
-  padding: 10px;
   border-radius: 10px;
   background-image: linear-gradient(#2a315d , #261935);
   }
 
 
   .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -1234,8 +1271,8 @@
   }
 
   .card img{
-    width: 330px;
-    height: 240px;
+    max-width: 330px;
+    max-height: 240px;
     border-radius: 20px;
   }
   
@@ -1253,13 +1290,12 @@
   }
   
   .card a {
-    display: inline-block;
+    width: 50%;
     margin-top: 10px;
     text-decoration: none;
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     background-color: transparent;
-    border: solid white;
     padding: 15px;
     border-radius: 10px;
   }
