@@ -174,8 +174,6 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative; /* Add relative positioning */
-      z-index: 1;
     }
   
     .FooterSocials {
@@ -503,6 +501,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 0;
     }
   
     .contact-container form{
@@ -526,7 +525,7 @@ body {
   
     .ContactBackground{
       border: none;
-      height: 700px;
+      height: 80vh;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -635,7 +634,7 @@ body {
 
 /* TABLET STYLES */
 
-@media screen and (min-width: 500px) and (max-width: 999px) {
+@media screen and (min-width: 500px) and (max-width: 999px)  {
 
   /* applies to screens wider than 999px */
   
@@ -745,15 +744,33 @@ body {
     .text-slideshow h1:nth-child(3) {
       animation: circularMotion 9s 6s infinite; 
     }
+
+
+    .ContactBackground{
+      border: none;
+      height: 80vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url("Assets/OIP.jpg");
+      background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+      }
 }
 
 
 
 /* DESKTOP STYLES-------------------------------------------------------- */
 
-@media screen and (min-width: 1000px) and (max-width: 2000px) {
+@media screen and (min-width: 1000px){
 
   /* applies to screens wider than 999px */
+
+  .home-container{
+    display: flex; 
+    flex-direction: column;
+    overflow-x: hidden; 
+  } 
 
 
   .Title-container {
@@ -773,7 +790,7 @@ body {
 
   .blockTwo{
   border: none;
-  height: 700px;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1250,6 +1267,17 @@ body {
     flex-direction: column;
   }
 
+  .ContactBackground{
+    border: none;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("Assets/OIP.jpg");
+    background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+    }
+
   input{
     padding: 10px;
     margin-top: 20px;
@@ -1265,7 +1293,7 @@ body {
 
   .ContactBackground{
     border: none;
-    height: 700px;
+    height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
