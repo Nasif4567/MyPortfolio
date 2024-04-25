@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     align-items: end;
     background-image: url("Assets/OIP.jpg");
-    background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+    background-size: 100% 100% ; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
     }
 
     p{
@@ -303,11 +303,12 @@ body {
 
     .text-slideshow {
       overflow: hidden;
-      width: 100%;
+      width: 100vw;
       margin-top: 100px;
       display: flex;
       align-items: center;
       flex-direction: column;
+      position: relative;
     }
     
     .text-slideshow h1 {
@@ -315,7 +316,8 @@ body {
       opacity: 0;
       color: white;
       font-size: 50px;
-      position: absolute;
+      left: 0;
+      top: 0;
     }
     
     @keyframes circularMotion {
@@ -713,8 +715,8 @@ body {
 
   .Title-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    gap: 40px; /* Adjust the gap between blocks */
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
     padding-left: 250px; 
     padding-top: 50px;
   }
@@ -757,6 +759,7 @@ body {
     width: 200px;
     height: 50px;
     padding: 10px;
+    margin-right: 10px;
     background-color: white;
     color: #2a315d;
     border: solid 1px white;
@@ -776,7 +779,6 @@ body {
   }
 
   .transparentbtn{
-    margin-left: 10px;
     border: solid 1px white;
     background-color: transparent;
     border-radius: 3px;
