@@ -35,7 +35,6 @@ async function listRepoIssues() {
         <img src="${assetsFolder}${images[imageIndex]}" alt="Image ${imageIndex + 1}">
         <h3>${data[repoIndex].name}</h3>
         <p>${data[repoIndex].description}</p>
-        <p>${data[repoIndex].language}</p>
         <a href="${data[repoIndex].html_url}" target="_blank">View on GitHub</a>
       `;
       card.innerHTML = cardContent;

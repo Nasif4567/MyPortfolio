@@ -14,7 +14,7 @@ function slideTo(page, event) {
 //--------------------------------------Download cv ----------------------------------------
 
   function downloadCV() {
-    const fileUrl = 'path/to/your/cv.pdf';
+    const fileUrl = 'CV/cv.pdf';
     const link = document.createElement('a');
     link.href = fileUrl;
     link.download = 'Your_CV_Name.pdf'; 
@@ -32,7 +32,7 @@ headerElement.innerHTML = `
     <a class="navlink" href="#" onclick="slideTo('index.html', event)">Home</a>
     <a class="navlink" href="#" onclick="slideTo('About.html', event)">About</a>
     <a class="navlink" href="#" onclick="slideTo('Works.html', event)">Work</a>
-    <p>Ahmed's Portfolio</p>
+    <p onclick="slideTo('index.html', event)">Ahmed's Portfolio</p>
     <button onclick="slideTo('Contact.html', event)">Let's Talk</button>
     <i class="fa fa-bars" onclick="toggleActive()"></i>
     
@@ -47,15 +47,15 @@ class Footer extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
         <div class="FooterSocials">
-          <a href="https://example.com/facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://example.com/twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://example.com/linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>  
+          <a href="https://www.facebook.com/ahmed.nasif.shahriar/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/ahmed-nasif-8015b6124/" target="_blank"><i class="fab fa-linkedin"></i></a>  
         </div>
 
         <div class="FooterBotom">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#Work">Work</a>
+          <a  href="index.html">Home</a>
+          <a href="About.html">About</a>
+          <a href="Works.html">Work</a>
         </div>
 
         <div class="FooterInfo">
