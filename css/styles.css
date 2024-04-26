@@ -350,7 +350,7 @@ body {
 
 
     .about-container{
-      display: flex; /* Use flex container */
+      display: flex; 
       flex-direction: column;  
       background-color: #2a315d; 
     }
@@ -369,7 +369,7 @@ body {
       overflow: hidden;
       background-size: cover;
       background-image: url('Assets/ProfilePic.jpg');
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
   }
   
     .AboutMe{
@@ -1396,3 +1396,18 @@ body {
   
   
 }  
+
+
+
+@media screen and (max-width: 280px){
+
+.AboutImage {
+  width: auto; /* Adjust the size as needed */
+  height: 600px;
+  overflow: hidden;
+  background-size: 100% 60%;
+  background-image: url('Assets/ProfilePic.jpg');
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+}
