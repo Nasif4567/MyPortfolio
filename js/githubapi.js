@@ -25,7 +25,7 @@ async function listRepoIssues() {
       const card = document.createElement('div');
       card.classList.add('card');
 
-        // Clear loading spinner after fetching data
+
     loadingSpinner.style.display = 'none';
 
 
@@ -49,7 +49,6 @@ async function listRepoIssues() {
 }
 
 
-// Function to shuffle array
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -57,5 +56,4 @@ function shuffleArray(array) {
   }
 }
 
-// Call the async function
 listRepoIssues();

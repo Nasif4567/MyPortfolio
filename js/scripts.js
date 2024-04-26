@@ -70,7 +70,7 @@ class Footer extends HTMLElement {
 
 
   function toggleActive() {
-    var activeDiv = document.getElementById("activeDiv");
+    const activeDiv = document.getElementById("activeDiv");
     if (activeDiv.style.display === "none") {
       activeDiv.style.display = "block";
     } else {
