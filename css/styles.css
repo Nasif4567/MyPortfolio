@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     align-items: end;
     background-image: url("Assets/OIP.jpg");
-    background-size: 100% 100% ; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+    background-size: 100% 100% ; 
     }
 
     p{
@@ -97,12 +97,12 @@ body {
     .navbar {
       background-color: #2a315d;
       overflow: hidden;
-      padding: 20px; /* Adjusted padding */
+      padding: 20px; 
       font-size: 18px;
       backdrop-filter: blur(10px);
       font-family: Arial, Helvetica, sans-serif;
-      display: flex; /* Use flexbox for better alignment control */
-      align-items: center; /* Center the items vertically */
+      display: flex; 
+      align-items: center; 
       justify-content: space-between;
     }
     
@@ -128,14 +128,14 @@ body {
 
     .active {
       position: absolute;
-      display: flex; /* Use flexbox */
-      flex-direction: column; /* Arrange items in a column */
-      justify-content: center; /* Center items vertically */
-      align-items: center; /* Center items horizontally */
-      background-color: purple; /* Example background color */
-      padding: 10px; /* Example padding */
-      margin-top: 10px; /* Add space between hamburger icon and active div */
-      text-align: center; /* Center text horizontally */
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      background-color: purple; 
+      padding: 10px; 
+      margin-top: 10px; 
+      text-align: center; 
       width: 100%;
       height: 100%;
       z-index: 1;
@@ -147,17 +147,17 @@ body {
       text-decoration: none;
       font-size: 20px;
       font-family: Arial, Helvetica, sans-serif;
-      margin: 5px; /* Adjust margin for spacing */
+      margin: 5px; 
     }
 
     
     .navbar p {
-      margin: 0; /* Remove default margin */
+      margin: 0; 
       font-weight: bold;
       font-size: 25px;
-      color: white; /* Adjusted text color */
+      color: white; 
       color: yellow;
-      transition: color 0.3s ease, transform 0.3s ease; /* Add transition for smooth color change and bounce effect */
+      transition: color 0.3s ease, transform 0.3s ease; 
     }
     
     .navbar p:hover {
@@ -206,7 +206,7 @@ body {
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      position: relative; /* Add relative positioning to the anchor */
+      position: relative;
     }
     
     .FooterBotom a::after {
@@ -217,13 +217,13 @@ body {
       background-color: white;
       bottom: 0;
       left: 0;
-      transform: scaleX(0); /* Initial state: no underline */
+      transform: scaleX(0); 
       transform-origin: bottom right;
-      transition: transform 0.3s ease; /* Add transition for smooth effect */
+      transition: transform 0.3s ease; 
     }
     
     .FooterBotom a:hover::after {
-      transform: scaleX(1); /* Fully display the underline on hover */
+      transform: scaleX(1); 
       transform-origin: bottom left;
     }
   
@@ -364,7 +364,7 @@ body {
     }
   
     .AboutImage {
-      width: auto; /* Adjust the size as needed */
+      width: auto; 
       height: 600px;
       overflow: hidden;
       background-size: cover;
@@ -531,7 +531,7 @@ body {
       flex-direction: column;
       align-items: center;
       background-image: url("Assets/OIP.jpg");
-      background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+      background-size: 100% 100%; 
       }
   
     .FormLayout{
@@ -666,7 +666,7 @@ body {
       font-family: Arial, Helvetica, sans-serif;
       border-radius: 3px;
       font-weight: bold;
-      transition: background-color 0.3s, width 0.3s, height 0.3s, transform 0.3s; /* Add transitions for width, height, and transform */
+      transition: background-color 0.3s, width 0.3s, height 0.3s, transform 0.3s; 
     }
     
     button:hover {
@@ -731,8 +731,7 @@ body {
         transform: translateX(-100%);
       }
     }
-    
-    /* Add delay to each paragraph */
+ 
     .text-slideshow h1:nth-child(1) {
       animation: circularMotion 9s infinite; 
     }
@@ -754,7 +753,7 @@ body {
       flex-direction: column;
       align-items: center;
       background-image: url("Assets/OIP.jpg");
-      background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+      background-size: 100% 100%; 
       }
 }
 
@@ -796,23 +795,10 @@ body {
   flex-direction: column;
   align-items: end;
   background-image: url("Assets/OIP.jpg");
-  background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+  background-size: 100% 100%; 
   }
 
 
-  p{
-    color: white;
-    font-size:18px;
-   font-family:sans-serif;
-   margin: 1;
-  }
-
-  h1{
-    margin: 0;
-    font-size:45px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-  }
 
 
   button {
@@ -889,15 +875,15 @@ body {
   }
   
   .navbar p {
-    margin: 0; /* Remove default margin */
-    margin-left: auto; /* Push the paragraph to the right */
+    margin: 0; 
+    margin-left: auto; 
     font-weight: bold;
-    color: white; /* Adjusted text color */
-    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for smooth color change and bounce effect */
+    color: white; 
+    transition: color 0.3s ease, transform 0.3s ease; 
   }
   
   .navbar p:hover {
-    color: yellow; /* Change the color on hover */
+    color: yellow;
     transform: scale(1.2); 
     cursor: pointer;
   }
@@ -915,146 +901,6 @@ body {
   }
 
 
-  .Footer{
-    width: 100%;
-    height: 250px;
-    margin-top: 0;
-    background-image: linear-gradient(#261935,#231e2a);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .FooterSocials {
-    margin-top: 20px;
-    color: gainsboro;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 30px;
-}
-
-.FooterSocials a {
-    color: gainsboro;
-    text-align: center;
-    padding: 14px 16px;
-}
-  .FooterBotom{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 15px;
-    align-items: center;
-  }
-
-  .FooterBotom a {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    position: relative; /* Add relative positioning to the anchor */
-  }
-  
-  .FooterBotom a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0); /* Initial state: no underline */
-    transform-origin: bottom right;
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
-  }
-  
-  .FooterBotom a:hover::after {
-    transform: scaleX(1); /* Fully display the underline on hover */
-    transform-origin: bottom left;
-  }
-
-  .FooterInfo {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 20px;
-    align-items: self-end;
-    margin-top: 10px;
-  }
-
-  .FooterInfo p {
-    color: gray;
-    font-size: 13px;
-    align-items: center;
-  }
-
-  
-
-
-
-
-
-
-  @keyframes fallRain {
-    to {
-      transform: translateY(100vh);
-    }
-  }
-  
-  .raindrop {
-    width: 2px;
-    height: 60px;
-    background-color: gray;
-    position: absolute;
-    top: -10px;
-    animation: fallRain linear infinite;
-  }
-  
-  .raindrop:nth-child(1) {
-    left: 10%;
-    animation-duration: 0.75s;
-  }
-  
-  .raindrop:nth-child(2) {
-    left: 20%;
-    animation-duration: 1s;
-  }
-  
-
-  .raindrop:nth-child(3) {
-    left: 30%;
-    animation-duration: 0.9s;
-  }
-  
-
-  .raindrop:nth-child(4) {
-    right: 40%;
-    animation-duration: 1.2s;
-  }
-
-  .raindrop:nth-child(5) {
-    right: 50%;
-    animation-duration: 1.5s;
-  }
-
-  .raindrop:nth-child(6) {
-    right: 30%;
-    animation-duration: 1.5s;
-  }
-
-  .raindrop:nth-child(7) {
-    right: 30%;
-    animation-duration: 1.5s;
-  }
-
-  .raindrop:nth-child(8) {
-    right: 10%;
-    animation-duration: 1.5s;
-  }
 
 
 
@@ -1093,7 +939,7 @@ body {
     }
   }
   
-  /* Add delay to each paragraph */
+  
   .text-slideshow h1:nth-child(1) {
     animation: circularMotion 9s infinite; 
   }
@@ -1109,7 +955,7 @@ body {
 
 
   .about-container{
-    display: flex; /* Use flex container */
+    display: flex; 
     flex-direction: column;  
     background-color: #2a315d; 
   }
@@ -1117,7 +963,7 @@ body {
   .AboutBlockGrid{
     
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-template-columns: 1fr 1fr; 
     background-image: linear-gradient(#2a315d , #000000);
   }
 
@@ -1129,7 +975,7 @@ body {
     margin-left: 100px;
     background-size: cover;
     background-image: url('Assets/ProfilePic.jpg');
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
   .AboutMe{
@@ -1275,7 +1121,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: url("Assets/OIP.jpg");
-    background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+    background-size: 100% 100%;
     }
 
   input{
@@ -1299,7 +1145,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: url("Assets/OIP.jpg");
-    background-size: 100% 100%; /* Ensure the background image covers the entire width and maintains a height of 400 pixels */
+    background-size: 100% 100%; 
     }
 
   .FormLayout{
@@ -1351,19 +1197,6 @@ body {
     border-radius: 20px;
   }
   
-  .card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .card p {
-    font-size: 16px;
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
   .card a {
     width: 50%;
     margin-top: 10px;
@@ -1379,20 +1212,7 @@ body {
     text-decoration: underline;
   }
 
-  .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: #7986cb;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+
   
   
 }  
