@@ -49,7 +49,7 @@ class Footer extends HTMLElement {
       this.innerHTML = `
         <div class="FooterSocials">
           <a href="https://www.facebook.com/ahmed.nasif.shahriar/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.linkedin.com/in/ahmed-nasif-shahriar-8015b6124/" target="_blank"><i class="fab fa-github"></i></a>  
+          <a href="https://www.linkedin.com/in/ahmed-nasif-shahriar-8015b6124/" target="_blank"><i class="fa fa-github"></i></a>  
         </div>
 
         <div class="FooterBotom">
