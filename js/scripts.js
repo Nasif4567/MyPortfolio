@@ -49,7 +49,6 @@ class Footer extends HTMLElement {
       this.innerHTML = `
         <div class="FooterSocials">
           <a href="https://www.facebook.com/ahmed.nasif.shahriar/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fab fa-twitter"></i></a>
           <a href="https://www.linkedin.com/in/ahmed-nasif-8015b6124/" target="_blank"><i class="fab fa-linkedin"></i></a>  
         </div>
 
