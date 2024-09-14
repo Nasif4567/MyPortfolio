@@ -5,8 +5,7 @@ async function listRepoIssues() {
     
     const response = await fetch('https://api.github.com/user/repos', {
       headers: {
-        'Authorization': 'Bearer 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',
-        'Accept': 'application/vnd.github.v3+json',
+       
       }
     });
 
